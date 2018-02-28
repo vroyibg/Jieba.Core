@@ -17,8 +17,3 @@ jieba.NET[详细介绍](https://github.com/anderscui/jieba.NET#特点)
 ## Platform Support
 
 * .NET Core 2.0
-* .NET Framework 4.6.1
-* Mono 4.6
-* Xamarin.iOS 10.0
-* Xamarin.Android 7.0
-* Universal Windows Platform 10
