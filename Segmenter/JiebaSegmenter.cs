@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using JiebaNet.Segmenter.Common;
 using JiebaNet.Segmenter.FinalSeg;
-using System.IO;
 
 namespace JiebaNet.Segmenter
 {
@@ -22,7 +22,7 @@ namespace JiebaNet.Segmenter
 
         #region Regular Expressions
 
-        internal static readonly Regex RegexChineseDefault = new Regex(@"([\u4E00-\u9FD5a-zA-Z0-9+#&\._]+)", RegexOptions.Compiled);
+        internal static readonly Regex RegexChineseDefault = new Regex(@"([\u4E00-\u9FD5a-zA-Z0-9+#&\._%]+)", RegexOptions.Compiled);
 
         internal static readonly Regex RegexSkipDefault = new Regex(@"(\r\n|\s)", RegexOptions.Compiled);
 
@@ -342,7 +342,7 @@ namespace JiebaNet.Segmenter
             var blocks = reHan.Split(text);
             foreach (var blk in blocks)
             {
-                if (string.IsNullOrWhiteSpace(blk))
+                if (string.IsNullOrEmpty(blk))
                 {
                     continue;
                 }
@@ -403,7 +403,7 @@ namespace JiebaNet.Segmenter
                 {
                     var startTime = DateTime.Now.Millisecond;
 
-                    var lines = FileExtension.ReadEmbeddedAllLines(dictFullPath);
+                    var lines = File.ReadAllLines(dictFullPath, Encoding.UTF8);
                     foreach (var line in lines)
                     {
                         if (string.IsNullOrWhiteSpace(line))
