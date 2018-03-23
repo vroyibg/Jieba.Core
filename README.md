@@ -1,8 +1,8 @@
 # Avaliable On Nuget 
 
- [JiebaNet.Analyser](https://www.nuget.org/packages/JiebaNet.Analyser/)
+>  [JiebaNet.Analyser](https://www.nuget.org/packages/JiebaNet.Analyser/)
 
- [JiebaNet.Segmenter](https://www.nuget.org/packages/JiebaNet.Segmenter/)
+>  [JiebaNet.Segmenter](https://www.nuget.org/packages/JiebaNet.Segmenter/)
 
 # jieba.NET .NET Core 版本
 
