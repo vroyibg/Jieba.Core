@@ -16,4 +16,4 @@ jieba.NET[详细介绍](https://github.com/anderscui/jieba.NET#特点)
 
 ## Platform Support
 
-* .NET Core 2.0
+* .NET Core 2.0+
