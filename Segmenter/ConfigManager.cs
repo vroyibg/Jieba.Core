@@ -9,8 +9,19 @@ namespace JiebaNet.Segmenter
         {
             get
             {
-                var configFileDir = "Resources";
-                return configFileDir;
+                string path = String.Empty;
+
+                var dir = AppDomain.CurrentDomain.GetData("JiebaConfigFileDir");
+                if (dir == null)
+                {
+                    path = "Resources";
+                }
+                else
+                {
+                    path = Path.Combine(dir.ToString(), "Resources");
+                }
+
+                return path;
             }
         }
 

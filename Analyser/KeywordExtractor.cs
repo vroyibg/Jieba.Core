@@ -1,5 +1,4 @@
 ﻿using JiebaNet.Segmenter.Common;
-using Microsoft.Extensions.FileProviders;
 using System.Collections.Generic;
 using System.IO;
 

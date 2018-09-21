@@ -10,6 +10,10 @@ namespace jieba.NET
         static void Main(string[] args)
         {
             var segmenter = new JiebaSegmenter();
+
+            // 必须设置正确的Resources路径
+            AppDomain.CurrentDomain.SetData("JiebaConfigFileDir", AppDomain.CurrentDomain.BaseDirectory);
+
             segmenter.LoadUserDict("userdict.txt");
             var segments = segmenter.Cut("我来到北京清华大学", cutAll: true);
             Console.WriteLine("【全模式】：{0}", string.Join("/ ", segments));

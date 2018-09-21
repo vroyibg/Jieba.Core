@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.FileProviders;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -16,9 +15,7 @@ namespace JiebaNet.Segmenter.Common
 
         public static string ReadEmbeddedAllLine(string path,Encoding encoding)
         {
-            var provider = new EmbeddedFileProvider(typeof(FileExtension).GetTypeInfo().Assembly);
-            var fileInfo = provider.GetFileInfo(path);
-            using (var sr = new StreamReader(fileInfo.CreateReadStream(), encoding))
+            using (var sr = new StreamReader(path))
             {
                 return sr.ReadToEnd();
             }
@@ -26,13 +23,11 @@ namespace JiebaNet.Segmenter.Common
 
         public static List<string> ReadEmbeddedAllLines(string path, Encoding encoding)
         {
-            var provider = new EmbeddedFileProvider(typeof(FileExtension).GetTypeInfo().Assembly);
-            var fileInfo = provider.GetFileInfo(path);
             List<string> list = new List<string>();
-            using (StreamReader streamReader = new StreamReader(fileInfo.CreateReadStream(), encoding))
+            using (var sr = new StreamReader(path))
             {
                 string item;
-                while ((item = streamReader.ReadLine()) != null)
+                while ((item = sr.ReadLine()) != null)
                 {
                     list.Add(item);
                 }
