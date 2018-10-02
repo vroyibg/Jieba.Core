@@ -4,14 +4,17 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>JiebaNet.Analyser</AssemblyName>
     <RootNamespace>JiebaNet.Analyser</RootNamespace>
-    <PackageProjectUrl>https://github.com/linezero/jieba.NET</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/linezero/jieba.NET</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/linezero/jieba.NET/blob/master/LICENSE</PackageLicenseUrl>
-    <Copyright>LineZero</Copyright>
-    <Authors>LineZero</Authors>
-    <PackageId>JiebaNetCore</PackageId>
-    <Product>JiebaNetCore</Product>
+    <PackageProjectUrl>https://github.com/1483523635/jieba.NetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/1483523635/jieba.NetCore</RepositoryUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <Copyright></Copyright>
+    <Authors>xiaoqu</Authors>
+    <PackageId>JiebaNet.Analyser</PackageId>
+    <Product>JiebaNet.Analyser</Product>
     <Description>jieba分词 .NET Core 版本</Description>
+    <Version>1.0.6</Version>
+    <PackageTags>结巴分词 结巴.netCore2.0</PackageTags>
+    <PackageReleaseNotes>fix Config路径兼容性问题</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
