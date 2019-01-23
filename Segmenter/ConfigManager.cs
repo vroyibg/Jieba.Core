@@ -18,7 +18,7 @@ namespace JiebaNet.Segmenter
                 }
                 else
                 {
-                    path = Path.Combine(dir.ToString(), "Resources");
+                    path = dir.ToString();
                 }
 
                 return path;

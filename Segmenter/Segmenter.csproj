@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>JiebaNet.Segmenter</RootNamespace>
-    <AssemblyName>JiebaNet.Segmenter</AssemblyName>
+    <RootNamespace>JiebaNet.Core</RootNamespace>
+    <AssemblyName>JiebaNet.Core</AssemblyName>
     <Version>1.0.6</Version>
-    <Authors>xiaoqu</Authors>
+    <Authors>CustomChen</Authors>
     <Description>jieba .net strandard 2.0 version</Description>
-    <PackageProjectUrl>https://github.com/1483523635/jieba.NetCore</PackageProjectUrl>
-    <PackageTags>结巴分词 结巴.netCore2.0</PackageTags>
-    <PackageReleaseNotes>fix Config路径兼容性问题</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/CustomChen/Jieba.Core</PackageProjectUrl>
+    <PackageTags>Jieba .Net Core 2.0</PackageTags>
+    <PackageReleaseNotes>jieba .net strandard 2.0 version</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
