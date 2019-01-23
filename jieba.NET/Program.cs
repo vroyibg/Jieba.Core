@@ -13,7 +13,7 @@ namespace jieba.NET
 
             //主词库位于 JiebaResources/dict.txt。
 
-            //加载自定义词库，相对路径为项目根路径。
+            //加载自定义词库。
             segmenter.LoadUserDict("userdict.txt");
 
             //添加新词

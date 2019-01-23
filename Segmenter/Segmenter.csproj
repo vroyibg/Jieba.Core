@@ -2,14 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>JiebaNet.Core</RootNamespace>
-    <AssemblyName>JiebaNet.Core</AssemblyName>
-    <Version>1.0.8</Version>
+    <RootNamespace>Jieba.Net.Core</RootNamespace>
+    <AssemblyName>Jieba.Net.Core</AssemblyName>
+    <Version>1.1.0</Version>
     <Authors>CustomChen</Authors>
     <Description>使用说明见：https://github.com/CustomChen/Jieba.Core/blob/master/README.md</Description>
     <PackageProjectUrl>https://github.com/CustomChen/Jieba.Core</PackageProjectUrl>
     <PackageTags>Jieba .Net Core 2.0</PackageTags>
     <PackageReleaseNotes>使用说明见：https://github.com/CustomChen/Jieba.Core/blob/master/README.md</PackageReleaseNotes>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageId>Jieba.Net.Core</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

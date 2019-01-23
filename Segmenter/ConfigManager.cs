@@ -1,5 +1,7 @@
-﻿using JiebaNet.Core.Properties;
+﻿
+using Jieba.Net.Core.Properties;
 using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace JiebaNet.Segmenter
@@ -19,7 +21,12 @@ namespace JiebaNet.Segmenter
             get
             {
                 string file = Path.Combine(ConfigFileBaseDir, "dict.txt");
-                if (!File.Exists(file)) File.WriteAllText(file, Resources.dict);
+                if (!File.Exists(file))
+                {
+                    string folder = Path.Combine(ConfigFileBaseDir);
+                    if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                    File.WriteAllText(file, Resources.dict);
+                }
                 return file;
             }
         }
@@ -29,7 +36,12 @@ namespace JiebaNet.Segmenter
             get
             {
                 string file = Path.Combine(ConfigFileBaseDir, "prob_trans.json");
-                if (!File.Exists(file)) File.WriteAllText(file, Resources.prob_trans);
+                if (!File.Exists(file))
+                {
+                    string folder = Path.Combine(ConfigFileBaseDir);
+                    if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                    File.WriteAllText(file, Resources.prob_trans);
+                }
                 return file;
             }
         }
@@ -39,7 +51,12 @@ namespace JiebaNet.Segmenter
             get
             {
                 string file = Path.Combine(ConfigFileBaseDir, "prob_emit.json");
-                if (!File.Exists(file)) File.WriteAllText(file, Resources.prob_emit);
+                if (!File.Exists(file))
+                {
+                    string folder = Path.Combine(ConfigFileBaseDir);
+                    if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                    File.WriteAllText(file, Resources.prob_emit);
+                }
                 return file;
             }
         }
@@ -50,7 +67,12 @@ namespace JiebaNet.Segmenter
             {
                 {
                     string file = Path.Combine(ConfigFileBaseDir, "pos_prob_start.json");
-                    if (!File.Exists(file)) File.WriteAllText(file, Resources.pos_prob_start);
+                    if (!File.Exists(file))
+                    {
+                        string folder = Path.Combine(ConfigFileBaseDir);
+                        if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                        File.WriteAllText(file, Resources.pos_prob_start);
+                    }
                     return file;
                 }
             }
@@ -62,7 +84,12 @@ namespace JiebaNet.Segmenter
             {
 
                 string file = Path.Combine(ConfigFileBaseDir, "pos_prob_trans.json");
-                if (!File.Exists(file)) File.WriteAllText(file, Resources.pos_prob_trans);
+                if (!File.Exists(file))
+                {
+                    string folder = Path.Combine(ConfigFileBaseDir);
+                    if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                    File.WriteAllText(file, Resources.pos_prob_trans);
+                }
                 return file;
             }
         }
@@ -72,7 +99,12 @@ namespace JiebaNet.Segmenter
             get
             {
                 string file = Path.Combine(ConfigFileBaseDir, "pos_prob_trans.json");
-                if (!File.Exists(file)) File.WriteAllText(file, Resources.pos_prob_trans);
+                if (!File.Exists(file))
+                {
+                    string folder = Path.Combine(ConfigFileBaseDir);
+                    if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                    File.WriteAllText(file, Resources.pos_prob_trans);
+                }
                 return file;
             }
         }
@@ -82,7 +114,12 @@ namespace JiebaNet.Segmenter
             get
             {
                 string file = Path.Combine(ConfigFileBaseDir, "char_state_tab.json");
-                if (!File.Exists(file)) File.WriteAllText(file, Resources.char_state_tab);
+                if (!File.Exists(file))
+                {
+                    string folder = Path.Combine(ConfigFileBaseDir);
+                    if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+                    File.WriteAllText(file, Resources.char_state_tab);
+                }
                 return file;
             }
         }
