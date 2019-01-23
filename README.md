@@ -1,4 +1,4 @@
-# jieba.NET .NET Core 版本
+﻿# jieba.NET .NET Core 版本
 
 基于[jieba.NET](https://github.com/anderscui/jieba.NET) 修改。
 
@@ -10,10 +10,14 @@
 
             var segmenter = new JiebaSegmenter();
 
-            // 必须设置正确的Resources路径
-            AppDomain.CurrentDomain.SetData("JiebaConfigFileDir", AppDomain.CurrentDomain.BaseDirectory);
+            //主词库位于 JiebaResources/dict.txt。
 
+            //加载自定义词库，相对路径为项目根路径。
             segmenter.LoadUserDict("userdict.txt");
+
+            //添加新词
+            segmenter.AddWord("北京清华大学");
+
             var segments = segmenter.Cut("我来到北京清华大学", cutAll: true);
             Console.WriteLine("【全模式】：{0}", string.Join("/ ", segments));
 
