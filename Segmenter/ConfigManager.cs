@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JiebaNet.Core.Properties;
+using System;
 using System.IO;
 
 namespace JiebaNet.Segmenter
@@ -9,44 +10,81 @@ namespace JiebaNet.Segmenter
         {
             get
             {
-                string path = "JiebaResources";
-                return path;
+                return "JiebaResources";
             }
         }
 
         public static string MainDictFile
         {
-            get { return Path.Combine(ConfigFileBaseDir, "dict.txt"); }
+            get
+            {
+                string file = Path.Combine(ConfigFileBaseDir, "dict.txt");
+                if (!File.Exists(file)) File.WriteAllText(file, Resources.dict);
+                return file;
+            }
         }
 
         public static string ProbTransFile
         {
-            get { return Path.Combine(ConfigFileBaseDir, "prob_trans.json"); }
+            get
+            {
+                string file = Path.Combine(ConfigFileBaseDir, "prob_trans.json");
+                if (!File.Exists(file)) File.WriteAllText(file, Resources.prob_trans);
+                return file;
+            }
         }
 
         public static string ProbEmitFile
         {
-            get { return Path.Combine(ConfigFileBaseDir, "prob_emit.json"); }
+            get
+            {
+                string file = Path.Combine(ConfigFileBaseDir, "prob_emit.json");
+                if (!File.Exists(file)) File.WriteAllText(file, Resources.prob_emit);
+                return file;
+            }
         }
 
         public static string PosProbStartFile
         {
-            get { return Path.Combine(ConfigFileBaseDir, "pos_prob_start.json"); }
+            get
+            {
+                {
+                    string file = Path.Combine(ConfigFileBaseDir, "pos_prob_start.json");
+                    if (!File.Exists(file)) File.WriteAllText(file, Resources.pos_prob_start);
+                    return file;
+                }
+            }
         }
 
         public static string PosProbTransFile
         {
-            get { return Path.Combine(ConfigFileBaseDir, "pos_prob_trans.json"); }
+            get
+            {
+
+                string file = Path.Combine(ConfigFileBaseDir, "pos_prob_trans.json");
+                if (!File.Exists(file)) File.WriteAllText(file, Resources.pos_prob_trans);
+                return file;
+            }
         }
 
         public static string PosProbEmitFile
         {
-            get { return Path.Combine(ConfigFileBaseDir, "pos_prob_emit.json"); }
+            get
+            {
+                string file = Path.Combine(ConfigFileBaseDir, "pos_prob_trans.json");
+                if (!File.Exists(file)) File.WriteAllText(file, Resources.pos_prob_trans);
+                return file;
+            }
         }
 
         public static string CharStateTabFile
         {
-            get { return Path.Combine(ConfigFileBaseDir, "char_state_tab.json"); }
+            get
+            {
+                string file = Path.Combine(ConfigFileBaseDir, "char_state_tab.json");
+                if (!File.Exists(file)) File.WriteAllText(file, Resources.char_state_tab);
+                return file;
+            }
         }
     }
 }
