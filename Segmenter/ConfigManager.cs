@@ -9,18 +9,7 @@ namespace JiebaNet.Segmenter
         {
             get
             {
-                string path = String.Empty;
-
-                var dir = AppDomain.CurrentDomain.GetData("JiebaConfigFileDir");
-                if (dir == null)
-                {
-                    path = "Resources";
-                }
-                else
-                {
-                    path = dir.ToString();
-                }
-
+                string path = "JiebaResources";
                 return path;
             }
         }
