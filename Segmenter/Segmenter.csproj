@@ -12,7 +12,7 @@
     <PackageReleaseNotes>使用说明见：https://github.com/CustomChen/Jieba.Core/blob/master/README.md</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageId>Jieba.Net.Core</PackageId>
+    <PackageId>Vroyibg.Jieba.Net.Core</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
